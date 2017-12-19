@@ -17,7 +17,7 @@ if (Meteor.isClient) {
     });
 
     it('should render title and timestamp', function () {
-      const wrapper = mount(<NoteListItem note={notes[0]} Sessions={Session} />);
+      const wrapper = mount(<NoteListItem note={notes[0]} Session={Session} />);
 
       expect(wrapper.find('h5').text()).toBe(notes[0].title);
       expect(wrapper.find('p').text()).toBe('12/18/17');
