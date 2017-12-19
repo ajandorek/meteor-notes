@@ -2,14 +2,18 @@ import React, { Component } from 'react';
 
 import PrivateHeader from './PrivateHeader';
 import NoteList from './NoteList';
+import Editor from './Editor';
 
-export default () => {
+export const Dashboard = () => {
   return (
     <div>
       <PrivateHeader title='Dashboard' />
       <div className='page-content'>
         <NoteList />
+        <Editor />
       </div>
     </div>
   )
 }
+
+export default Dashboard;
