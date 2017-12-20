@@ -49,22 +49,26 @@ export class Editor extends Component {
       return (
         <div className='editor'>
           <input
+            className='editor__title'
             value={this.state.title}
             placeholder='Untitled Note'
             onChange={this.handleTitleChange.bind(this)}
           />
           <textarea
+            className='editor__body'
             value={this.state.body}
             placeholder='Your note here'
             onChange={this.handleBodyChange.bind(this)}
           ></textarea>
-          <button onClick={this.handleDelete.bind(this)}>Delete Note</button>
+          <div>
+            <button className='button button--secondary' onClick={this.handleDelete.bind(this)}>Delete Note</button>
+          </div>
         </div>
       )
     } else {
       return (
         <div className='editor'>
-          <p>{this.props.selectedNoteId ? 'Note not found.' : 'Pick or create a note to get started.'}</p>
+          <p className='editor__message'>{this.props.selectedNoteId ? 'Note not found.' : 'Pick or create a note to get started.'}</p>
         </div>
       )
     }
