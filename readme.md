@@ -1,6 +1,6 @@
 # Notes App
 
-This is a notes application built on Meteor
+This is a notes application built on Meteor. Simply create an account and add a note to be saved in real time!
 
 ## Getting Started
 
